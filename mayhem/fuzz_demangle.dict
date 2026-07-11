@@ -1,0 +1,63 @@
+# Dictionary for glog's google::Demangle (Itanium C++ ABI name mangling).
+# Tokens steer the fuzzer toward valid-ish mangled symbols so it reaches deeper
+# parser states in src/demangle.cc instead of bailing on the leading "_Z" check.
+
+# Mangled-name prefixes
+prefix_Z="_Z"
+prefix_ZN="_ZN"
+prefix_ZL="_ZL"
+prefix_ZGV="_ZGV"
+prefix_ZTV="_ZTV"
+prefix_ZTI="_ZTI"
+prefix_ZTS="_ZTS"
+prefix_ZTT="_ZTT"
+prefix_ZTc="_ZTc"
+prefix_ZThn="_ZThn"
+
+# Nesting / scope terminators
+end_E="E"
+ctor_C1="C1"
+ctor_C2="C2"
+dtor_D0="D0"
+dtor_D1="D1"
+dtor_D2="D2"
+
+# Substitution / standard-namespace abbreviations
+sub_S_="S_"
+sub_St="St"
+sub_Sa="Sa"
+sub_Sb="Sb"
+sub_Ss="Ss"
+sub_Si="Si"
+sub_So="So"
+
+# Template markers
+tmpl_I="I"
+tmpl_T_="T_"
+tmpl_T0="T0_"
+
+# Builtin type codes
+ty_void="v"
+ty_bool="b"
+ty_char="c"
+ty_int="i"
+ty_uint="j"
+ty_long="l"
+ty_float="f"
+ty_double="d"
+ty_ptr="P"
+ty_ref="R"
+ty_const="K"
+ty_rvref="O"
+
+# Operator encodings
+op_new="nw"
+op_delete="dl"
+op_call="cl"
+op_index="ix"
+op_assign="aS"
+
+# A couple of fully-formed mangled symbols
+sym_foo="_Z3foov"
+sym_nested="_ZN3foo3barEv"
+sym_string="_ZNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEE"

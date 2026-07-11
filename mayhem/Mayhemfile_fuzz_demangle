@@ -1,0 +1,9 @@
+project: glog
+target: fuzz_demangle
+cmds:
+  - cmd: /mayhem/fuzz_demangle
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_demangle.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_demangle/testsuite
